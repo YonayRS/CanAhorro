@@ -5,8 +5,14 @@
 }
 
 #root {
-  height: 310vh;
-  background: green;
+  height: 250vh;
+}
+
+body {
+  background-image: url('images/background/fondo.jpg');
+  background-size: cover; /* Para que la imagen se ajuste al tamaño del cuerpo */
+  background-position: center; /* Para centrar la imagen */
+  background-repeat: no-repeat; /* Para evitar que la imagen se repita */
 }
 
 .logo-container {
@@ -119,6 +125,9 @@
 }
 
 .social-button {
+  display:flex;
+  justify-content: right;
+  flex-wrap: row;
   padding: 0;
   width: 60px;
   margin-bottom: 30px;

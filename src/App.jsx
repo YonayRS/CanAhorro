@@ -24,7 +24,6 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="*" element={<Home />} />
       </Routes>
-      <span>AQui9iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</span>
       <Footer />
     </BrowserRouter>
     

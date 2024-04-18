@@ -36,12 +36,6 @@ function SuperMarketList() {
             </ul>
             <MapComponent />
 
-            <div className="social-icons">
-                <img src="/images/redes-sociales/facebook.jpg" alt="Facebook" />
-                <img src="/images/redes-sociales/instagram.jpg" alt="Instagram" />
-                <img src="/images/redes-sociales/twitter.jpg" alt="Twitter" />
-            </div>
-
         </>
     );
 }

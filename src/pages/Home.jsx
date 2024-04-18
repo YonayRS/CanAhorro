@@ -2,28 +2,28 @@ import { useNavigate } from "react-router-dom";
 
 
 const services = [
-  { id: 1, name: "Buscar", description: "Encuetra el producto", image: "/images/funciones/funcion_1.png" },
-  { id: 2, name: "Comparar", description: "¿Más barato? ¿Más caro?", image: "/images/funciones/funcion_2.png" },
+  { id: 1, name: "Buscar", description: "Encuetra el producto", image: "/images/functions/funcion_1.png" },
+  { id: 2, name: "Comparar", description: "¿Más barato? ¿Más caro?", image: "/images/functions/funcion_2.png" },
   // Agrega más servicios según sea necesario
 ];
 
 const benefits = [
-  { id: 1, name: "Ahorrar", description: "Sin perder tiempo o dinero", image: "/images/beneficios/ahorrar.png" },
+  { id: 1, name: "Ahorrar", description: "Sin perder tiempo o dinero", image: "/images/benefits/ahorrar.png" },
   // Agrega más beneficios según sea necesario
 ];
 
 const rewards = [
-  { id: 1, name: "Colaborar", description: "Ayuda a actualizar la información y se te recompensa", image: "/images/recompensas/colaborar.png" },
+  { id: 1, name: "Colaborar", description: "Ayuda a actualizar la información y se te recompensa", image: "/images/rewards/colaborar.png" },
   // Agrega más recompensas según sea necesario
 ];
 
 
 
 const products = [
-  { id: 1, name: "Productos cárnicos", description: "Carnes", image: "/images/información/descripcion-1.jpg" },
-  { id: 2, name: "Cereales", description: "Derivados de granos", image: "/images/información/descripcion-2.jpg" },
-  { id: 3, name: "Productos de origen animal", description: "Derivados de animales", image: "/images/información/descripcion-3.jpg" },
-  { id: 3, name: "Salsas y Condimentos", description: "Realzan el sabor", image: "/images/información/descripcion-4.jpg" },
+  { id: 1, name: "Productos cárnicos", description: "Carnes", image: "/images/information/descripcion-1.jpg" },
+  { id: 2, name: "Cereales", description: "Derivados de granos", image: "/images/information/descripcion-2.jpg" },
+  { id: 3, name: "Productos de origen animal", description: "Derivados de animales", image: "/images/information/descripcion-3.jpg" },
+  { id: 3, name: "Salsas y Condimentos", description: "Realzan el sabor", image: "/images/information/descripcion-4.jpg" },
 ];
 
 
@@ -53,11 +53,11 @@ function Home() {
       </div>
       <div className="logos-wrapper">
         <div className="logos-image-wrapper">
-          <img src="/images/supermercados/lidl-logo.jpg" alt="Lidl" />
-          <img src="/images/supermercados/aldi-logo.jpg" alt="Aldi" />
-          <img src="/images/supermercados/mercadona-logo.jpg" alt="Mercadona" />
-          <img src="/images/supermercados/carrefour-logo.jpg" alt="Carrefour" />
-          <img src="/images/supermercados/hiperdino-logo.jpg" alt="Hiperdino" />
+          <img src="/images/supermarket/lidl-logo.jpg" alt="Lidl" />
+          <img src="/images/supermarket/aldi-logo.jpg" alt="Aldi" />
+          <img src="/images/supermarket/mercadona-logo.jpg" alt="Mercadona" />
+          <img src="/images/supermarket/carrefour-logo.jpg" alt="Carrefour" />
+          <img src="/images/supermarket/hiperdino-logo.jpg" alt="Hiperdino" />
         </div>
       </div>
 
@@ -107,11 +107,6 @@ function Home() {
             <p>{product.description}</p>
           </div>
         ))}
-      </div>
-      <div className="social-icons">
-        <img src="/images/redes-sociales/facebook.jpg" alt="Facebook" />
-        <img src="/images/redes-sociales/instagram.jpg" alt="Instagram" />
-        <img src="/images/redes-sociales/twitter.jpg" alt="Twitter" />
       </div>
     </>
   );
