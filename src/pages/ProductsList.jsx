@@ -83,7 +83,7 @@ function Products() {
                             <p><strong>Categoría:</strong> {p.Category}</p>
                             <p><strong>Marca:</strong> {p.Brand}</p>
                             <p><strong>Formato:</strong> {p.Format}</p>
-                            <p><strong>Price:</strong> {p.Price}</p>
+                            <p><strong>Precio:</strong> {p.Price}</p>
                         </div>
                     </div>
                 ))}
