@@ -17,30 +17,21 @@ function SuperMarketList() {
         navigate("/market-list");
     }
 
+    const handleClick4 = () => {
+        navigate("/rss");
+      }
+
     return (
         <>
             <div className="container">
                 <div className="navigation">
                     <button onClick={handleClick}>Inicio</button>
-                    <button onClick={handleClick2}>Supermercados</button>
+                    <button onClick={handleClick3}>Supermercados</button>
                     <button onClick={handleClick2}>Productos</button>
+                    <button onClick={handleClick4}>RSS</button>
                 </div>
             </div>
-            <p>Lista de Supermercados</p>
-            <ul>
-                <li>Lidl</li>
-                <li>Aldi</li>
-                <li>Carrefour</li>
-                <li>Hacendado</li>
-                <li>Dino</li>
-            </ul>
             <MapComponent />
-
-            <div className="social-icons">
-                <img src="/images/redes-sociales/facebook.jpg" alt="Facebook" />
-                <img src="/images/redes-sociales/instagram.jpg" alt="Instagram" />
-                <img src="/images/redes-sociales/twitter.jpg" alt="Twitter" />
-            </div>
 
         </>
     );

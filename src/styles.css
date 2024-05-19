@@ -5,10 +5,20 @@
 }
 
 #root {
-  height: 310vh;
-  background: green;
+  height: 270vh;
 }
 
+body {
+  background-image: url('images/background/fondo.jpg');
+  background-size: cover;
+  /* Para que la imagen se ajuste al tamaño del cuerpo */
+  background-position: center;
+  /* Para centrar la imagen */
+  background-repeat: no-repeat;
+  /* Para evitar que la imagen se repita */
+}
+
+/* Logotipo */
 .logo-container {
   display: flex;
   justify-content: center;
@@ -47,7 +57,7 @@
   margin: 5px;
 }
 
-.logos-image-wrapper > img {
+.logos-image-wrapper>img {
   width: 15%;
   height: 100%;
   object-fit: cover;
@@ -119,14 +129,133 @@
 }
 
 .social-button {
+  display: flex;
+  justify-content: right;
+  flex-wrap: row;
   padding: 0;
   width: 60px;
   margin-bottom: 30px;
 }
 
 .footer-text {
-  position: fixed; /* Posición fija */
-  bottom: 0; /* En la parte inferior */
-  left: 0; /* En la esquina izquierda */
-  margin: 10px; /* Añade un poco de margen alrededor del párrafo */
+  position: fixed;
+  /* Posición fija */
+  bottom: 0;
+  /* En la parte inferior */
+  left: 0;
+  /* En la esquina izquierda */
+  margin: 10px;
+  /* Añade un poco de margen alrededor del párrafo */
+}
+
+/* Menú móvil */
+
+.mobile-menu {
+  display: contents;
+  /* Oculta el menú en dispositivos que no sean móviles */
+}
+
+.menu-toggle {
+  display: block;
+  /* Muestra el botón de menú */
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.menu {
+  display: none;
+  /* Oculta el menú desplegable por defecto */
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  margin-bottom: 10px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Mostrar el menú al hacer clic en el botón */
+.menu-toggle[aria-expanded="true"]+#menu {
+  display: block;
+}
+
+/* Products Firebase */
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+
+.product-button {
+  margin-right: 50px; /* Define el margen entre botones */
+  background-color: black;
+  color: greenyellow; /* Color del texto */
+  width: 100px;
+  height: 50px;
+  font-size: 18px; /* Tamaño de fuente */
+}
+
+.product-info {
+  display: none;
+}
+
+.product-info.active {
+  display: block;
+}
+
+.product-buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 130px;
+  /* Espacio entre botones */
+  justify-content: center;
+  /* Centra los elementos horizontalmente */
+}
+
+.product-button-wrapper {
+  flex: 0 0 auto;
+  display: inline-block;
+  position: relative;
+  max-width: 150px;
+  /* Establece un ancho máximo para los botones */
+  margin-right: 10px;
+}
+
+.product-info {
+  position: absolute;
+  top: calc(100% + 5px);
+  /* Coloca la información debajo del botón con un pequeño espacio */
+  left: 0;
+  background-color: green;
+  padding: 10px;
+  /* Ajusta el espaciado interno */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  width: 200px;
+  /* Ancho del cuadro de información */
+}
+
+.absolute {
+  position: absolute;
+  width: 100%; /* Ancho al 100% del contenedor padre */
+  height: 62%; /* Altura automática para mantener la proporción */
+  top: 60%; 
+}
+
+.rss-link {
+  font-size: 20px;
+  margin-bottom: 10px;
 }
