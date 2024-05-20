@@ -26,9 +26,8 @@ body {
 }
 
 .logo-image {
-  width: 1910px;
-  height: 400px;
-  object-fit: fill;
+  width: 100%;
+  height: auto;
 }
 
 .navigation {
