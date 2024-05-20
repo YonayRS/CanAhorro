@@ -18,7 +18,7 @@ export default function ProductsList() {
     }
 
     const handleClick4 = () => {
-        navigate("/rss");
+        window.location.href = "/rss.xml";
     }
 
     return (

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+<channel>
+  <title>CanAhorro</title>
+  <link>https://canahorro-d4714.web.app/</link>
+  <description>CanAhorro es un comparador de productos alimenticios entre los diferentes supermercados más populares en Canarias. Ayudará ahorrando tiempo y dinero a todos los usuarios.</description>
+  <item>
+    <title>Inicio</title>
+    <link>https://canahorro-d4714.web.app/home</link>
+    <description>Presentación de la App</description>
+  </item>
+  <item>
+    <title>Supermercados</title>
+    <link>https://canahorro-d4714.web.app/market-list</link>
+    <description>Ubicación de los Supermercados asociados con nosotros</description>
+  </item>
+  <item>
+    <title>Productos</title>
+    <link>https://canahorro-d4714.web.app/product-list</link>
+    <description>Comparación del precio de los productos</description>
+  </item>
+</channel>
+
+</rss>

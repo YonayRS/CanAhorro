@@ -1,20 +1,17 @@
 import { useNavigate } from "react-router-dom";
-
+import React from "react";
 
 const services = [
   { id: 1, name: "Buscar", description: "Encuetra el producto", image: "/images/functions/funcion_1.png" },
   { id: 2, name: "Comparar", description: "¿Más barato? ¿Más caro?", image: "/images/functions/funcion_2.png" },
-  // Agrega más servicios según sea necesario
 ];
 
 const benefits = [
   { id: 1, name: "Ahorrar", description: "Sin perder tiempo o dinero", image: "/images/benefits/ahorrar.png" },
-  // Agrega más beneficios según sea necesario
 ];
 
 const rewards = [
   { id: 1, name: "Colaborar", description: "Ayuda a actualizar la información y se te recompensa", image: "/images/rewards/colaborar.png" },
-  // Agrega más recompensas según sea necesario
 ];
 
 
@@ -43,8 +40,8 @@ function Home() {
   }
 
   const handleClick4 = () => {
-    navigate("/rss");
-  }
+    window.location.href = "/rss.xml";
+}
 
   return (
     <>
