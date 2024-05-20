@@ -30,6 +30,6 @@ Si tienes preguntas o comentarios, puedes contactarnos en [correo electrónico](
 
 ¡Gracias por usar el Comparador de Alimentos y esperamos que te sea útil en tus compras!
 
-##RSS
+## RSS
 
 https://canahorro-d4714.web.app
