@@ -1,30 +1,41 @@
+
+import React, { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import SuperMarketList from "./pages/SuperMarketList";
 import ProductsList from "./pages/ProductsList";
 import RSS from "./pages/RSS";
-import logo from "/images/logo.jpg"
+import HomePage from "./pages/HomePage";
+import logo from "/images/logo.jpg";
 import Footer from "./components/Footer";
+import MobileMenu from "./components/MobileMenu";
 import "./styles.css";
 
 function App() {
+  useEffect(() => {
+    console.log("useEffect triggered");
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.menu');
+
+    menuToggle.addEventListener('click', function () {
+      const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+
+      menuToggle.setAttribute('aria-expanded', !expanded);
+      menu.style.display = expanded ? 'none' : 'block';
+    });
+  }, []);
+
+  <HomePage />
+
   return (
     <BrowserRouter>
       <>
-      <h2 style={{ color: "greenyellow", fontSize: '24px', fontWeight: 'bold'}}>Canahorro</h2>
+        <h2 style={{ color: "greenyellow", fontSize: '24px', fontWeight: 'bold' }}>Canahorro</h2>
         <div className="logo-container">
           <img src={logo} className="logo-image" alt="Logo" />
         </div>
 
-        <div className="mobile-menu">
-          <button className="menu-toggle" aria-expanded="false" aria-controls="menu">☰</button>
-          <ul className="menu" id="menu">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Supermercados</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">RSS</a></li>
-          </ul>
-        </div>
+        <MobileMenu />
 
         <Routes>
           <Route path="/rss" element={<RSS />} />

@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import React from "react";
+import React, { useState } from "react";
 
 const services = [
   { id: 1, name: "Buscar", description: "Encuetra el producto", image: "/images/functions/funcion_1.png" },
@@ -14,15 +14,12 @@ const rewards = [
   { id: 1, name: "Colaborar", description: "Ayuda a actualizar la información y se te recompensa", image: "/images/rewards/colaborar.png" },
 ];
 
-
-
 const products = [
   { id: 1, name: "Productos cárnicos", description: "Carnes", image: "/images/information/descripcion-1.jpg" },
   { id: 2, name: "Cereales", description: "Derivados de granos", image: "/images/information/descripcion-2.jpg" },
   { id: 3, name: "Productos de origen animal", description: "Derivados de animales", image: "/images/information/descripcion-3.jpg" },
   { id: 4, name: "Salsas y Condimentos", description: "Realzan el sabor", image: "/images/information/descripcion-4.jpg" },
 ];
-
 
 function Home() {
   const navigate = useNavigate();
@@ -41,7 +38,27 @@ function Home() {
 
   const handleClick4 = () => {
     window.location.href = "/rss.xml";
-}
+  }
+
+  // Estado para almacenar la lista de productos
+  const [productsList, setProductsList] = useState(products);
+
+  // Función para agregar un nuevo producto
+  const addProduct = () => {
+    const newProductId = productsList.length + 1;
+    const newProduct = {
+      id: newProductId,
+      name: `Producto ${newProductId}`,
+      description: `Descripción del Producto ${newProductId}`,
+      image: `/images/productos/producto${newProductId}.jpg`
+    };
+    setProductsList([...productsList, newProduct]);
+  };
+
+  // Función para eliminar un producto por su ID
+  const deleteProduct = (id) => {
+    setProductsList(productsList.filter(product => product.id !== id));
+  };
 
   return (
     <>
@@ -102,13 +119,15 @@ function Home() {
       </div>
 
       <div className="description">
-        {products.map(product => (
+        {productsList.map(product => (
           <div key={product.id} className="product">
             <img src={product.image} alt={product.name} />
             <h3>{product.name}</h3>
             <p>{product.description}</p>
+            <button onClick={() => deleteProduct(product.id)}>Eliminar</button>
           </div>
         ))}
+        <button onClick={addProduct}>Agregar Producto</button>
       </div>
     </>
   );
